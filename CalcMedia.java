@@ -16,19 +16,24 @@ public class CalcMedia {
 
         double media = (dNota1 + dNota2 + dNota3 + dNota4) /4;
 
-        if (media >= 50) {
-            if (media >=75) {
-                JOptionPane.showMessageDialog(null, "Aluno está aprovado com a media " + media);
+        int opcao = JOptionPane.showConfirmDialog(null, "Deseja mostrar o valor da media? ");
+
+        if (opcao == JOptionPane.YES_OPTION) {
+            if (media >= 50) {
+                if (media >=75) {
+                    JOptionPane.showMessageDialog(null, "Aluno está aprovado com a media " + media);
+                }else{
+                    JOptionPane.showMessageDialog(null, "aluno esta de recuperação" + media);
+                }
             }else{
-                JOptionPane.showMessageDialog(null, "aluno esta de recuperação" + media);
+                JOptionPane.showMessageDialog(null,"o aluno está retido com a media de: " + media);
             }
+    
+    
+            JOptionPane.showMessageDialog(null, "a media é " + media);
         }else{
-            JOptionPane.showMessageDialog(null,"o aluno está retido com a media de: " + media);
+            System.out.println("Fechando o programa");
         }
-
-
-        JOptionPane.showMessageDialog(null, "a media é " + media);
-        
 
     }
 }
