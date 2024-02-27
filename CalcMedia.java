@@ -32,6 +32,7 @@ public class CalcMedia {
     
             JOptionPane.showMessageDialog(null, "a media é " + media);
         }else{
+            System.out.println("sua notas foram: " + nota1 + "," + nota2 + "," + nota3 + "," + nota4);
             System.out.println("Fechando o programa");
         }
 
